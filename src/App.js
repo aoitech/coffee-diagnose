@@ -9,6 +9,7 @@ import Root from "./routes/root";
 import Que from "./routes/que";
 import CoffeeQ1 from "./routes/coffee-q1";
 import Result from "./routes/result";
+import TestResult from "./routes/test-result";
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,9 @@ const router = createBrowserRouter([
   },  {
     path: "result",
     element: <Result />
+  }, {
+    path: "test-result",
+    element: <TestResult />
   }
 ]);
 

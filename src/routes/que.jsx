@@ -15,12 +15,13 @@ export default function que() {
   const form = GetValue();
   const getGender = GetGender();
   const getAge = GetAge();
-  // console.log(getAge)
-  const genderId = getGender.props.children[1].props.value
   const formValue = form.props.children.props.value
+  const genderId = getGender.props.children[1].props.value
+  console.log(genderId)
+  const ageId = getAge.props.children[1].props.value
   const queValue = [];
   // スプレッド構文
-  const addQueValue = [...queValue, formValue, genderId];
+  const addQueValue = [...queValue, formValue, genderId, ageId];
   return (
     <>
   <div className="App">
@@ -40,7 +41,10 @@ export default function que() {
       {getAge}
       </div>
         <div class="p-2"></div>
-      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`} state={{ state: addQueValue }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
+      { genderId == 1 ?
+      <center><div className="d-grid gap-2 p-4"><Link to={`/coffee-q1`} state={{ state: addQueValue }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center> :
+      <center><div className="d-grid gap-2"><Link to={`/test-result`} state={{ state: addQueValue }}><Button className="btn-dark btn-lg">テスト次へ</Button></Link></div></center>
+    }
       <Link to={`/`}><Back/></Link>
     <div class="p-4"></div>
     </div>
