@@ -21,14 +21,14 @@ export function GetAge() {
 
   return (
     <>
-      {ages.map((a, i) => (
-        <div className="row justify-content-center p-4" key={ i }>
-          <div className="col-3" >
-            <Button className="btn-light btn-outline-dark p-3">{ a.name }</Button>
-          </div>
-        </div>
+     { ages.map((a, i) => (
+      <div class="row justify-content-center p-4" key={ i }>
+        <Button onClick={(e) => setAge(e.currentTarget.value)}  value={ a.id } className="btn-light btn-outline-dark p-3">
+          {a.name}
+        </Button>
+      </div>
       ))}
-      {/* <input type="hidden"  value={ `${ gender }` ? `${ gender }` : 0 }></input> */}
+      <input type="hidden"  value={ `${ age }` ? `${ age }` : 0 }></input>
     </>
   );
 }

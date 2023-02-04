@@ -11,10 +11,12 @@ export function GetGender() {
     { id: 3, name: 'その他' }
   ];
 
+
   const [gender, setGender] = useState('');
+
   return (
     <>
-      {genders.map((gen, i) => (
+      { genders.map((gen, i) => (
         <div className="col-3" key={ i }>
           <Button onClick={(e) => setGender(e.currentTarget.value)}  value={ gen.id } className="btn-light btn-outline-dark p-3">
             {gen.name}

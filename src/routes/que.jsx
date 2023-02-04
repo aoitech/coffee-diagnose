@@ -37,36 +37,8 @@ export default function que() {
         </Container>
       <div className="p-4">年代</div>
       <div class="row justify-content-center p-4" >
-        {/* { getAge } */}
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">10代</Button>
-          </div>
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">20代</Button>
-          </div>
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">30代</Button>
-          </div>
-        </div>
-        <div class="row justify-content-center p-4" >
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">40代</Button>
-          </div>
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">50代</Button>
-          </div>
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">60代</Button>
-          </div>
-        </div>
-        <div class="row justify-content-center p-4" >
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">70代</Button>
-          </div>
-          <div class="col-4">
-            <Button className="btn-light btn-outline-dark p-3">80代以上</Button>
-          </div>
-        </div>
+      {getAge}
+      </div>
         <div class="p-2"></div>
       <center><div className="d-grid gap-2"><Link to={`/coffee-q1`} state={{ state: addQueValue }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
       <Link to={`/`}><Back/></Link>
