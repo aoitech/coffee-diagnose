@@ -10,7 +10,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 
 export  const testdesu = (passData2) => {
   if ( passData2[1] == 2) {
-   return <> <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: passData2 }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center><Link to={`/`}><Back /></Link></>
+   return <> <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: passData2 }}><Button variant="contained" className="btn-dark btn-lg">次へ</Button></Link></div></center><Link to={`/`}><Back /></Link></>
   } else {
     return <> <Link to={`/`}><Back/></Link> </>
   }
