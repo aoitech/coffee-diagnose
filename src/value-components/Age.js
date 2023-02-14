@@ -23,12 +23,12 @@ export function GetAge() {
     <>
      { ages.map((a, i) => (
       <div class="row justify-content-center p-4" key={ i }>
-        <Button onClick={(e) => setAge(e.currentTarget.value)}  value={ a.id } className="btn-light btn-outline-dark p-3">
+        <Button onClick={(e) => {setAge(e.currentTarget.value); }} value={ a.id } className="btn-light btn-outline-dark p-3">
           {a.name}
         </Button>
       </div>
       ))}
-      <input type="hidden"  value={ `${ age }` ? `${ age }` : 0 }></input>
+      <input type="hidden"  value={ `${ age }` ? `${ age }` : '' }></input>
     </>
   );
 }
